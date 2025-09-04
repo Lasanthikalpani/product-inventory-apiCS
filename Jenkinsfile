@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     tools {
-        maven 'M3'  // Requires Maven to be configured in Jenkins
-        jdk 'jdk17' // Requires JDK 17 to be configured in Jenkins
-    }
-
+    maven 'apache-maven-3.9.6'   // Use the name Jenkins knows
+    jdk 'jdk-17'                 // Use the name Jenkins knows
+}
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials') // Jenkins credentials ID for Docker Hub
         IMAGE_NAME = "lasanthi821/product-inventory-api" // ← Change this!
