@@ -20,10 +20,10 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                sh 'mvn clean compile'
-            }
-        }
+    steps {
+        bat 'mvn clean compile'
+    }
+}
 
         stage('Test') {
             steps {
