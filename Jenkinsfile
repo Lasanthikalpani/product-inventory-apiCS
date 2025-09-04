@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials') // Jenkins credentials ID for Docker Hub
-        IMAGE_NAME = "your-dockerhub-username/product-inventory-api" // ← Change this!
+        IMAGE_NAME = "lasanthi821/product-inventory-api" // ← Change this!
         DOCKER_TAG = "latest"
     }
 
@@ -16,7 +16,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', 
-                url: 'https://github.com/your-username/product-inventory-api.git' // ← Change this!
+                url: 'https://github.com/Lasanthikalpani/product-inventory-apiCS.git' // ← Change this!
                 }
         }
 
